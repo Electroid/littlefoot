@@ -29,6 +29,18 @@ littlefoot was forked from [Bigfoot.js](https://github.com/lemonmade/bigfoot/) b
 
 Install using NPM:
 
+```sh
+npm install littlefoot
+```
+
+Or Bun:
+
+```sh
+bun add littlefoot
+```
+
+And then include it with your module bundler of choice:
+
 ```shell
 npm install --save littlefoot
 ```
@@ -65,20 +77,20 @@ The script will work with a wide array of markup, but you will need to make sure
 Once you've set up the appropriate markup, all you need to do is include the following in your code:
 
 ```javascript
-const { littlefoot } = require('littlefoot')
+const { littlefoot } = require("littlefoot");
 
-littlefoot()
+littlefoot();
 ```
 
 You can also configure the available options by passing an object literal, and you can store the return object to make use of some of the methods it makes available:
 
 ```javascript
-const { littlefoot } = require('littlefoot')
+const { littlefoot } = require("littlefoot");
 
 const lf = littlefoot({
   activateOnHover: true,
   hoverDelay: 250,
-})
+});
 ```
 
 You'll also want to include styles for the button and popovers, a number of which come with the script.
@@ -94,11 +106,11 @@ Install the [Littlefoot for Footnotes](https://github.com/s3rgiosan/littlefoot) 
 2. At the root of the site's project, create or edit a [`gatsby-browser.js`](https://www.gatsbyjs.org/docs/gatsby-project-structure/#files) file and add the following:
 
    ```js
-   import littlefoot from 'littlefoot'
-   import 'littlefoot/dist/littlefoot.css'
+   import littlefoot from "littlefoot";
+   import "littlefoot/dist/littlefoot.css";
 
    export function onRouteUpdate() {
-     littlefoot() // Pass any littlefoot settings here.
+     littlefoot(); // Pass any littlefoot settings here.
    }
    ```
 
@@ -128,7 +140,7 @@ performance.
      type="application/javascript"
    ></script>
    <script type="application/javascript">
-     littlefoot.littlefoot() // Pass any littlefoot settings here.
+     littlefoot.littlefoot(); // Pass any littlefoot settings here.
    </script>
    ```
 
